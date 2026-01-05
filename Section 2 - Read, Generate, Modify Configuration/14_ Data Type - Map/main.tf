@@ -1,10 +1,19 @@
-#List example [1, "abcd", true, "hari", "haran", 2903]
+#Map example --> Collection of Key Value pair
+/* 
+  {
+    "Name": "Hari",
+    "Location": "Chennai"
+  }
+*/
 
-variable "my-list"{
-  #type = list(number) --> only numbers allowed in list ex: [1,2,3]
-  type = list 
+variable "my-map"{
+  type = map 
+  default = {
+    "Name": "Hari",
+    "Wife": "Madhu"
+  }
 }
 
-output "my-list"{
-  value = var.my-list
+output "my-map"{
+  value = var.my-map
 }
